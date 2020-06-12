@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.geometry.Insets?>
+<GridPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="com.trevormetcalf.controller.ViewAppointmentsController"
+          prefHeight="500.0" prefWidth="800.0"
+          alignment="center" hgap="10" vgap="10" stylesheets="@../trevortaskc195/style.css" styleClass="appointments">
+
+    <HBox GridPane.rowIndex="0" GridPane.columnIndex="1" GridPane.columnSpan="3" spacing="20">
+        <RadioButton fx:id="allButton" text="All" selected="true" onAction="#radioHandler">
+            <toggleGroup>
+                <ToggleGroup fx:id="appointments"/>
+            </toggleGroup>
+        </RadioButton>
+        <RadioButton fx:id="weekButton" text="Week" onAction="#radioHandler">
+            <toggleGroup>
+                <fx:reference source="appointments"/>
+            </toggleGroup>
+        </RadioButton>
+        <RadioButton fx:id="monthButton" text="Month" onAction="#radioHandler">
+            <toggleGroup>
+                <fx:reference source="appointments"/>
+            </toggleGroup>
+        </RadioButton>
+    </HBox>
+    <TableView fx:id="appointmentTableView" prefWidth="800" prefHeight="300" styleClass="tableview"
+               GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.columnSpan="8" onMouseClicked="#updateLabelHandler">
+        <columns>
+            <TableColumn fx:id="col_title" text="Title" styleClass="column" prefWidth="200"/>
+            <TableColumn fx:id="col_contact" text="Consultant" styleClass="column" prefWidth="100"/>
+            <TableColumn fx:id="col_customer" text="Customer" styleClass="column" prefWidth="100"/>
+            <TableColumn fx:id="col_location" text="Location" styleClass="column" prefWidth="100"/>
+            <TableColumn fx:id="col_type" text="Type" styleClass="column" prefWidth="100"/>
+            <TableColumn fx:id="col_start" text="Date/Time (UTC)" styleClass="column" prefWidth="200"/>
+        </columns>
+    </TableView>
+
+    <Label text="Title:" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+    <Label fx:id="titleLabel" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+
+    <Label text="Local Time:" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+    <Label fx:id="localLabel" GridPane.columnIndex="2" GridPane.rowIndex="4"/>
+
+    <Label text="Description:" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+    <Label fx:id="descriptionLabel" GridPane.columnIndex="2" GridPane.rowIndex="3"/>
+
+    <Button fx:id="backButton" text="Back" prefWidth="100" GridPane.columnIndex="1" GridPane.rowIndex="5" onAction="#backButtonHandler" />
+    <Button fx:id="updateButton" text="Update" prefWidth="100" GridPane.columnIndex="2" GridPane.rowIndex="5" onAction="#updateButtonHandler" />
+    <Label GridPane.columnIndex="3" GridPane.rowIndex="5" prefWidth="400"/>
+    <Button fx:id="deleteButton" text="Delete" prefWidth="100" GridPane.columnIndex="7" GridPane.rowIndex="5" onAction="#deleteButtonHandler"/>
+
+</GridPane>

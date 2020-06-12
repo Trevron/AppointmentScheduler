@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="com.trevormetcalf.controller.ViewCustomersController"
+          prefHeight="500.0" prefWidth="800.0"
+          alignment="center" hgap="10" vgap="10" stylesheets="@../trevortaskc195/style.css" styleClass="customer">
+    <TableView fx:id="customerTableView" prefWidth="800" prefHeight="400" styleClass="tableview"
+            GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="8">
+        <columns>
+            <TableColumn fx:id="col_name" text="Name" styleClass="column" prefWidth="100"/>
+            <TableColumn fx:id="col_address" text="Address" styleClass="column" prefWidth="200"/>
+            <TableColumn fx:id="col_address2" text="Address2" styleClass="column" prefWidth="100"/>
+            <TableColumn fx:id="col_city" text="City" styleClass="column" prefWidth="100"/>
+            <TableColumn fx:id="col_postalCode" text="Postal" styleClass="column" prefWidth="100"/>
+            <TableColumn fx:id="col_country" text="Country" styleClass="column" prefWidth="100"/>
+            <TableColumn fx:id="col_phone" text="Phone" styleClass="column" prefWidth="100"/>
+        </columns>
+    </TableView>
+    <Button fx:id="backButton" text="Back" prefWidth="100" GridPane.columnIndex="1" GridPane.rowIndex="1" onAction="#backButtonHandler"/>
+    <Button fx:id="updateButton" text="Update" prefWidth="100" GridPane.columnIndex="2" GridPane.rowIndex="1" onAction="#updateButtonHandler"/>
+    <Label GridPane.columnIndex="3" GridPane.rowIndex="1" prefWidth="400"/>
+    <Button fx:id="deleteButton" text="Delete" prefWidth="100" GridPane.columnIndex="7" GridPane.rowIndex="1" onAction="#deleteButtonHandler"/>
+
+
+
+</GridPane>

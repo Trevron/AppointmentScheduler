@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.trevormetcalf.controller.MainWindowController"
+            prefHeight="500.0" prefWidth="800.0" stylesheets="@../trevortaskc195/style.css" styleClass="default">
+    <left>
+        <VBox spacing="10" alignment="CENTER" styleClass="leftPane" minWidth="266.66" maxWidth="266.66">
+            <padding>
+                <Insets top="10" bottom="10" right="10" left="10"/>
+            </padding>
+            <Label text="Reports"/>
+            <Button text="Consultant Schedules" onAction="#handleConsultantSchedulesButton"/>
+            <Button text="Appointments by Type" onAction="#handleAppointmentsByTypeButton"/>
+            <Button text="Appointments by Location" onAction="#handleAppointmentsByLocationButton"/>
+        </VBox>
+    </left>
+
+    <center>
+        <VBox spacing="10" alignment="CENTER" styleClass="centerPane" minWidth="266.66" maxWidth="266.67">
+            <padding>
+                <Insets top="10" bottom="10" right="10" left="10"/>
+            </padding>
+            <Label text="Appointments"/>
+            <Button text="View Appointments" onAction="#handleViewAppointmentsButton"/>
+            <Button text="Add Appointment" onAction="#handleAddAppointmentButton"/>
+        </VBox>
+    </center>
+
+    <right>
+        <VBox spacing="10" alignment="CENTER" styleClass="rightPane" minWidth="266.66" maxWidth="266.66">
+            <padding>
+                <Insets top="10" bottom="10" right="10" left="10"/>
+            </padding>
+            <Label text="Customers"/>
+            <Button text="View Customers" onAction="#handleViewCustomersButton"/>
+            <Button text="Add Customer" onAction="#handleAddCustomerButton"/>
+        </VBox>
+    </right>
+    <bottom>
+        <HBox alignment="BOTTOM_RIGHT" styleClass="bottomPane" spacing="10">
+            <padding>
+                <Insets top="10" bottom="10" right="10" left="10"/>
+            </padding>
+            <Button fx:id="readLogButton" text="Database Logs" onAction="#handleReadLogButton"/>
+            <Button fx:id="logoutButton" text="Logout" onAction="#handleLogoutButton"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>

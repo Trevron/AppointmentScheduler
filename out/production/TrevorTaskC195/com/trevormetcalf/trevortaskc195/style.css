@@ -1,0 +1,68 @@
+.default {
+    -fx-background-color: #2E4057;
+    -fx-text-fill: #f4f1bb;
+
+}
+
+.textField {
+    -fx-background-color: #d9e5d6;
+    -fx-text-fill: #2E4057;
+}
+
+.label {
+    -fx-text-fill: #f4f1bb;
+    -fx-font-weight: bold;
+}
+
+.button {
+    -fx-background-color: #d9e5d6;
+}
+
+.leftPane {
+    -fx-background-color: #2d2a32;
+}
+
+.rightPane {
+    -fx-background-color: #444b6e;
+}
+
+.centerPane {
+   -fx-background-color: #2E4057;
+}
+
+.bottomPane {
+    -fx-background-color: #2E4057;
+    -fx-border-color: #f4f1bb;
+    -fx-border-width: 3px;
+    -fx-border-style: solid;
+}
+
+.customer {
+    -fx-background-color: #444b6e;
+}
+
+.tableview {
+    -fx-background-color: transparent;
+}
+
+.column .label {
+    -fx-background-color: #d9e5d6;
+    -fx-text-fill: #2E4057;
+}
+
+.appointments {
+    -fx-background-color: #2E4057;
+}
+
+.radio-button
+{
+    -fx-text-fill: #f4f1bb;
+}
+
+.date-picker-popup > .month-year-pane .label {
+    -fx-text-fill: black;
+}
+
+.reports {
+    -fx-background-color: #2d2a32;
+}
